@@ -1,0 +1,15 @@
+public class DayOfWeekPrinter {
+
+    public static void main(String[] args) {
+        String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+        int totalDays = 365;
+
+        for (int day = 1; day <= totalDays; day++) {
+            int dayOfWeekIndex = (day - 1) % 7;
+            String dayOfWeek = daysOfWeek[dayOfWeekIndex];
+
+            System.out.println("Day " + day + ": " + dayOfWeek);
+        }
+    }
+}

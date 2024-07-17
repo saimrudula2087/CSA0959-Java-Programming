@@ -1,0 +1,21 @@
+2. public class SearchSpaceCharacter {
+    public static void main(String[] args) {
+        String text = "This is a sample string.";
+        int index = 0;
+        boolean found = false;
+
+        while (index < text.length()) {
+            if (text.charAt(index) == ' ') {
+                found = true;
+                break; // Exit the loop as soon as a space character is found
+            }
+            index++;
+        }
+
+        if (found) {
+            System.out.println("First space character found at index: " + index);
+        } else {
+            System.out.println("No space character found in the string.");
+        }
+    }
+}

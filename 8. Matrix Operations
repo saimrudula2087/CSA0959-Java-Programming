@@ -1,0 +1,104 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+ import java.util.Scanner;
+
+public class MatrixOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[][] matrixA = new int[2][2];
+        int[][] matrixB = new int[2][2];
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("Menu:");
+            System.out.println("a. Enter Matrix A");
+            System.out.println("b. Enter Matrix B");
+            System.out.println("c. Display A + B");
+            System.out.println("d. Display A - B");
+            System.out.println("e. Display A * B");
+            System.out.println("f. Exit");
+            System.out.print("Choose an option: ");
+            char choice = scanner.next().charAt(0);
+
+            switch (choice) {
+                case 'a':
+                    matrixA = enterMatrix(scanner, "A");
+                    break;
+                case 'b':
+                    matrixB = enterMatrix(scanner, "B");
+                    break;
+                case 'c':
+                    displayMatrix(addMatrices(matrixA, matrixB), "A + B");
+                    break;
+                case 'd':
+                    displayMatrix(subtractMatrices(matrixA, matrixB), "A - B");
+                    break;
+                case 'e':
+                    displayMatrix(multiplyMatrices(matrixA, matrixB), "A * B");
+                    break;
+                case 'f':
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid option. Please choose again.");
+            }
+        }
+    }
+
+    private static int[][] enterMatrix(Scanner scanner, String matrixName) {
+        int[][] matrix = new int[2][2];
+        System.out.println("Enter values for Matrix " + matrixName + ":");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print("[" + i + "][" + j + "]: ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        return matrix;
+    }
+
+    private static int[][] addMatrices(int[][] a, int[][] b) {
+        int[][] result = new int[2][2];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                result[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        return result;
+    }
+
+    private static int[][] subtractMatrices(int[][] a, int[][] b) {
+        int[][] result = new int[2][2];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                result[i][j] = a[i][j] - b[i][j];
+            }
+        }
+        return result;
+    }
+
+    private static int[][] multiplyMatrices(int[][] a, int[][] b) {
+        int[][] result = new int[2][2];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                result[i][j] = a[i][0] * b[0][j] + a[i][1] * b[1][j];
+            }
+        }
+        return result;
+    }
+
+    private static void displayMatrix(int[][] matrix, String operation) {
+        System.out.println("Result of " + operation + ":");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+	}
+}

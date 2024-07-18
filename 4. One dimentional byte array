@@ -1,0 +1,8 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	  byte[] values = new byte[10];
+    Arrays.fill(values, (byte) 1);
+	}
+}

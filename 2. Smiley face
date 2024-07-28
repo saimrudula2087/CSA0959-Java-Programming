@@ -1,0 +1,18 @@
+// A. SAI MRUDULA - 192372087
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String y="  ",x="⬜ ";
+		System.out.println(y+y+y+y+y+y+y+y);
+		System.out.println(y+y+x+x+x+x+y+y);
+    	System.out.println(y+x+y+y+y+y+x+y);
+    	System.out.println(x+y+x+y+y+x+y+x);
+    	System.out.println(x+y+y+y+y+y+y+x);
+    	System.out.println(x+y+x+y+y+x+y+x);
+    	System.out.println(x+y+y+x+x+y+y+x);
+    	System.out.println(y+x+y+y+y+y+x+y);
+		System.out.println(y+y+x+x+x+x+y+y);
+
+	}
+}

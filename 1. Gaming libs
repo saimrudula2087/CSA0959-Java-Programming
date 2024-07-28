@@ -1,0 +1,61 @@
+// A.SAI MRUDULA - 192372087
+
+import java.util.Scanner;
+
+public class GamingLibs {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter an age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Enter a city: ");
+        String city = scanner.nextLine();
+
+        System.out.print("Enter an animal: ");
+        String animal = scanner.nextLine();
+
+        System.out.print("Enter a verb (present tense): ");
+        String verb = scanner.nextLine();
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        System.out.print("Enter a temperature: ");
+        double temperature = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter an adjective: ");
+        String adjective = scanner.nextLine();
+
+        System.out.print("Enter a type of food: ");
+        String food = scanner.nextLine();
+
+        System.out.print("Enter a color: ");
+        String color = scanner.nextLine();
+
+        int nextAge = age + 1;
+        double halfTemperature = temperature / 2.0;
+
+        System.out.println("\nStory:");
+        System.out.println("Once I was 7 years old, my mama told me, 'Go make yourself some friends or you'll be lonely.'");
+        System.out.println("Once I was " + age + " years old, " + name + " lived in " + city + ".");
+        System.out.println("One day, " + name + " found a " + animal + " in the backyard.");
+        System.out.println("It was " + color + " and " + adjective + ", and it liked to " + verb + " all day long.");
+        System.out.println("In one year, " + name + " would be " + nextAge + " years old.");
+        System.out.println("The temperature outside was " + temperature + " degrees Celsius, which felt like " + halfTemperature + " degrees Fahrenheit.");
+        System.out.println(name + " wrote a story, got told that it was boring.");
+        System.out.println("Once I was 20 years old, soon we'll be 30 years old.");
+        System.out.println("Soon I'll be 60 years old, will I think the world is cold?");
+        System.out.println("While walking in the park, " + name + " decided to have " + number + " " + food + "s for lunch.");
+        System.out.println("I hope my children come and visit once or twice a month.");
+        System.out.println("And they lived happily ever after.");
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,160 @@
+// 192372087 - A.SAI MRUDULA
+
+package bikeproject;
+
+public interface Bikeparts 
+{
+	public final String Make="Oracle Bikes";
+	public String getHandleBars();
+	public void setHandleBars(String newValue);
+	public String getTyres();
+	public void setTyres(String newValue);
+	public String getSeatType();
+	public void setSeatType(String newValue);
+}
+
+package bikeproject;
+
+public interface MountainPart
+{
+    public final String TERRAIN = "off_road";
+    public String getSuspension();
+    public void setSuspension(String newValue);
+    public String getType();
+    public void setType(String newValue);
+}
+
+package bikeproject;
+
+public interface RoadParts 
+{
+    public final String TERRAIN = "track_racing";
+    public String getTyreWidth();
+    public void setTyreWidth(String newValue);
+    public String getPostHeight();
+    public void setPostHeight(String newValue);
+}
+
+package bikeproject;
+
+public class Bike implements Bikeparts 
+{
+    private String handleBars;
+    private String tyres;
+    private String seatType;
+        public Bike(String handleBars, String tyres, String seatType) {
+        this.handleBars = handleBars;
+        this.tyres = tyres;
+        this.seatType = seatType;
+    }
+        public String getHandleBars() {
+        return handleBars;
+    }
+    public void setHandleBars(String newValue) {
+        handleBars = newValue;
+    }
+    public String getTyres() {
+        return tyres;
+    }
+    public void setTyres(String newValue) {
+        tyres = newValue;
+    }
+    public String getSeatType() {
+        return seatType;
+    }
+    public void setSeatType(String newValue) {
+        seatType = newValue;
+    }
+}
+
+package bikeproject;
+
+public class MountainBike extends Bike implements Mountainparts {
+    private String suspension;
+    private String type;
+        public MountainBike(String handleBars, String tyres, String seatType, String suspension, String type) {
+        super(handleBars, tyres, seatType);
+        this.suspension = suspension;
+        this.type = type;
+    }
+    public String getSuspension() {
+        return suspension;
+    }
+    public void setSuspension(String newValue) {
+        suspension = newValue;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String newValue) {
+        type = newValue;
+    }
+}
+
+package bikeproject;
+
+public class Bike implements Bikeparts 
+{
+    private String handleBars;
+    private String tyres;
+    private String seatType;
+        public Bike(String handleBars, String tyres, String seatType) {
+        this.handleBars = handleBars;
+        this.tyres = tyres;
+        this.seatType = seatType;
+    }
+        public String getHandleBars() {
+        return handleBars;
+    }
+    public void setHandleBars(String newValue) {
+        handleBars = newValue;
+    }
+    public String getTyres() {
+        return tyres;
+    }
+    public void setTyres(String newValue) {
+        tyres = newValue;
+    }
+    public String getSeatType() {
+        return seatType;
+    }
+    public void setSeatType(String newValue) {
+        seatType = newValue;
+    }
+}
+
+package bikeproject;
+
+public class BikeTest {
+    public static void main(String[] args) {
+        Bike bike = new Bike("Standard", "All-Terrain", "Comfort");
+        MountainBike mountainBike = new MountainBike("Mountain", "Knobby", "Racing", "Full", "Downhill");
+        RoadBikes roadBike = new RoadBikes("Road", "Smooth", "Sport", "Narrow", "22");
+        roadBike.setPostHeight("20");
+        System.out.println("Bike Details:");
+        System.out.println("Handle Bars: " + bike.getHandleBars());
+        System.out.println("Tyres: " + bike.getTyres());
+        System.out.println("Seat Type: " + bike.getSeatType());
+        
+        System.out.println("\nMountain Bike Details:");
+        System.out.println("Handle Bars: " + mountainBike.getHandleBars());
+        System.out.println("Tyres: " + mountainBike.getTyres());
+        System.out.println("Seat Type: " + mountainBike.getSeatType());
+        System.out.println("Suspension: " + mountainBike.getSuspension());
+        System.out.println("Type: " + mountainBike.getType());
+        
+        System.out.println("\nRoad Bike Details:");
+        System.out.println("Handle Bars: " + roadBike.getHandleBars());
+        System.out.println("Tyres: " + roadBike.getTyres());
+        System.out.println("Seat Type: " + roadBike.getSeatType());
+        System.out.println("Tyre Width: " + roadBike.getTyreWidth());
+        System.out.println("Post Height: " + roadBike.getPostHeight()); 
+    }
+}
+
+
+
+
+
+
+
